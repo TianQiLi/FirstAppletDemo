@@ -38,6 +38,11 @@ Page({
             "newsContent": "b股大涨了额，港深股也不错",
             "newsCount": 10,
             "newsDate": "2017-09-10",
+          }, {
+            "newTitle": "c股波动",
+            "newsContent": "b股大涨了额，港深股也不错",
+            "newsCount": 10,
+            "newsDate": "2017-09-10",
           }
 
     ]
