@@ -1,0 +1,17 @@
+
+<template name = "templateCustom">
+  <view>
+    <view class="listItem">
+      <image class='headIMgClass' src='../../images/timg-8.jpeg'></image>
+      <text>  {{newTitle + idx}}</text>
+    </view>
+
+    <view class="listItem">
+      <text class='newsItemClass'>{{newsContent}} 
+        </text>
+      <text class='readCountClass'>阅读量{{newsCount}}</text>
+      <text class='dateClass'>发布日期: {{newsDate}}</text>
+    </view>
+    <view class='marginLineClass'> </view>
+  </view>
+</template>

@@ -1,32 +1,24 @@
+<import src="../../template/template-view.wxml" />
+
 <view>
-    <swiper vertical= '{{false}}'  class='swiperClass' indicator-dots='true' autoplay='true' interval='3000'>
-        <swiper-item>
-             <image src='../../images/timg-3.jpeg' class='swiperImgClass'></image>
-        </swiper-item>
-        <swiper-item>
-              <image src='../../images/timg-5.jpeg' class='swiperImgClass'></image>
-        </swiper-item>
-        <swiper-item>
-              <image src='../../images/timg-2.jpg' class='swiperImgClass'></image>
-        </swiper-item>
-    </swiper>
+  <swiper vertical='{{false}}' class='swiperClass' indicator-dots='true' autoplay='true' interval='3000'>
+    <swiper-item>
+      <image src='../../images/timg-3.jpeg' class='swiperImgClass'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/timg-5.jpeg' class='swiperImgClass'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/timg-2.jpg' class='swiperImgClass'></image>
+    </swiper-item>
+  </swiper>
 </view>
 
- <block wx:for="{{newsList_key}}" wx:for-item= "item" wx:for-index = "idx">
-    <view>
-    <view class="listItem">
-    <image class='headIMgClass' src='../../images/timg-8.jpeg'></image>
-    <text>  {{item.newTitle + idx}}</text>
-    </view>
+<block wx:for="{{newsList_key}}" wx:for-item="item" wx:for-index="idx">
+  <view catchtap='newCellClickEvent' data-postId="{{item.newTitle}}">
+  <!-- //...可以将对象展开 -->
+    <template is="templateCustom" data="{{...item}}" />
+  </view>
 
-    <view class="listItem">
-        <text class='newsItemClass'>{{item.newsContent}} 
-        </text>
-         <text class='readCountClass'>阅读量{{item.newsCount}}</text> 
-          <text class='dateClass'>发布日期: {{item.newsDate}}</text> 
-    </view>
-    <view class='marginLineClass'> </view>
-</view>
- 
 
-</block> 
+</block>
